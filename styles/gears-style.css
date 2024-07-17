@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+/* common design */
+
+:root{
+    --color1: rgb(58, 58, 58);
+    --color2: rgb(24, 25, 31);
+    --color3: rgba(0, 0, 0, 0.87);
+    --color4: rgb(120, 120, 133);
+    --margin: margin: 0px 60px;
+}
+.flex{
+    display: flex;
+}
+
+/* header section design part 1 */
+body{
+    max-width: 1440px;
+    /* border: 2px solid green; */
+    margin: 0px auto;
+}
+.nav-title{
+    justify-content: space-between;
+    width: 90%;
+    /* border: 2px solid gray; */
+    margin: 0px auto;
+}
+.nav-title > h4{
+    color: var(--color1);
+    /* border: 2px solid red; */
+    font-size: 1rem;
+    font-weight: 700;
+}
+.nav-items{
+    list-style: none;
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* second part design */
+
+.header-content{
+    /* border: 2px solid gray; */
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 500px;
+    width: 90%;
+    margin: 0px auto;
+    justify-content: space-between;
+}
+.header-content > div h1, p, button{
+    color:var(--color1);
+}
+.header-content > div h1{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.header-content > div p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 75%;
+    /* border: 2px solid green; */
+}
+.header-content > div{
+    /* border: 2px solid salmon; */
+    height: 80%;
+    
+}
+.header-content .text-content{
+    /* border: 2px solid black; */
+    margin-top: 40px;
+}
+button:hover{
+    cursor: pointer;
+}
+button{
+    width: 12rem;
+    height: 2.75rem;
+    border-radius: 20px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: start;
+    padding-left: 1rem;
+    font-weight: 600;
+    background: rgb(224, 44, 109);
+}
+.img-content{
+    /* background-image: url(../images/Circle\ design.svg);
+    background-repeat: no-repeat; */
+    padding-right: 2rem;
+    padding-top: 1.75rem;
+    /* height: 90%; */
+    width: 100%;
+    margin-left: 5rem;
+    /* border: 2px solid tomato; */
+    width: 70%;
+}
+
+/* third section design */
+
+.sponser-team{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 6.25rem;
+    align-items: center;
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 192px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    /* border: 2px solid red; */
+    background: linear-gradient(135.00deg, rgba(192, 204, 218, 0.1) 0%,rgba(192, 204, 218, 0.6) 50.378%,rgba(192, 204, 218, 0.1) 100%);
+}
+
+/* responsiveness for small devices */
+
+@media screen and (max-width:576px) {
+    .nav-title,
+    .nav-items,
+    .header-content{
+        flex-direction: column;
+        /* flex: wrap; */
+    
+    }
+    .sponser-team{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 250px;
+        height: fit-content;
+    }
+    .nav-items{
+        gap: 2px;
+    }
+    .header-content .text-content{
+        width: 100%;
+        margin: 15px auto;
+        /* margin-bottom: 50px; */
+    }
+    .header-content > div h1{
+        width: 100%;
+    }
+    .header-content > div p{
+        width: 100%;
+    }
+    .img-content{
+        margin: 0px auto;
+        width: 90%;
+    }
+}
